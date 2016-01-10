@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Timestamp microservice</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="header">
+                API Basejump: Timestamp microservice
+            </h1>
+            <blockquote>
+                User stories:
+                <ul>1) I can pass a string as a parameter, and it will check to see whether that string 
+                contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
+                <ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
+                <ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
+            </blockquote>
+            <h3>Example usage:</h3>
+            <code>https://timestamp-fc.herokuapp.com/api/unixtime/December%2015,%202015</code><br>
+            <code>https://timestamp-fc.herokuapp.com/api/unixtime/1450137600</code>
+            <h3>Example output:</h3>
+            <code>
+                {
+                  "unix": 1450137600,
+                  "natural": "December 15, 2015"
+                }
+            </code>
+            <h1 class="header">
+                Basejump: Request Header Parser Microservice
+            </h1>
+            <blockquote>
+                User stories:
+                <ul>1)  I can get the IP address, language and operating system for my browser.</ul>
+            </blockquote>
+            <h3>Example usage:</h3>
+            <code>https://timestamp-fc.herokuapp.com/api/whoami</code><br>
+            <h3>Example output:</h3>
+            <code>
+                {
+                    "ipaddress":"109.103.234.87",
+                    "language":["en-US"],
+                    "software":"Windows NT 10.0; WOW64"
+                }
+            </code>
+        </div>
+    </body>
+</html>
